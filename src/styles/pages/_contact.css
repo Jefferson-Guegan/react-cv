@@ -1,0 +1,56 @@
+.contactContent {
+    background: linear-gradient(115deg, 
+    var(--secondary-color) 50%, 
+    transparent 100%);
+    min-height: var(--minHeight);
+    width: 100%;
+    min-height: 500px;
+    border-radius: var(--borderRadius);
+    position: relative;
+    overflow: hidden;
+}
+
+.contactContent::after {
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: inherit;
+    background: url('../../media/background.jpg') no-repeat
+    center/cover;
+    z-index: -1;
+    filter: brightness(30%);
+    transform: translateX(30%);
+}
+
+.content {
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    font-family: var(--primary-font);
+}
+
+.contactContent h4 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.address p {
+    transform: translateX(3rem);
+}
+
+.phone h4 {
+    transform: translateX(6rem);
+}
+
+.phone p {
+    transform: translateX(9rem);
+}
+
+.email h4 {
+    transform: translateX(12rem);
+}
+
+.email p {
+    transform: translateX(15rem);
+}

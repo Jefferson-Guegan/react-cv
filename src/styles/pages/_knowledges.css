@@ -1,0 +1,298 @@
+.knowledges .knowledgesContent {
+    min-height: var(--minHeight);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: 
+    "L E F"
+    "O O H";
+}
+
+.languagesFramework, .experience, .formation, .otherSkills, .hobbies {
+    background: var(--secondary-color);
+    border-radius: var(--borderRadius);
+    padding: 0.8rem;
+    margin: 0.1rem;
+}
+
+.knowledges .knowledgesContent h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-family: var(--primary-font);
+    color: var(--fourth-color);
+    text-transform: uppercase;
+}
+
+.languagesFramework {
+    grid: L;
+    margin-bottom: .5rem;
+}
+
+.languagesFramework h3 {
+    margin-bottom: .3rem;
+}
+
+.languagesFramework:hover, .experience:hover,
+.formation:hover, .otherSkills:hover, .hobbies:hover {
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+.years {
+    font-size: .65rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--white);
+}
+
+.years span {
+    width: 36%
+}
+
+.years span:nth-child(2) {
+    text-align: center;
+    width: 20%;
+}
+
+.years span:nth-child(3) {
+    text-align: right;
+    width: 44%;
+}
+
+.years span:nth-child(2):before, 
+.years span:nth-child(3):before {
+    content:'';
+    background: rgba(180,179,179, 0.5);
+    position: absolute;
+    height: 53%;
+    width: 1px;
+    transform: translate(9px, 19px);
+}
+
+.languagesList {
+    padding-top: .5rem;
+}
+
+.languagesList li {
+    color: var(--primary-color);
+}
+
+.progressBar {
+    height: 2rem;
+    background: transparent;
+    margin-top: .2rem;
+    position: relative;
+}
+
+.progressBar:after {
+    content:'';
+    background: var(--third-color);
+    height: 2rem;
+    position: absolute;
+    width: 0;
+    animation: line 2s ease-out forwards;
+}
+
+@keyframes line {
+    to {
+        width: 100%;
+    }
+}
+
+.experience {
+    overflow: auto;
+    grid-area: E;
+    margin: 0 0 .5rem .5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 1fr 1fr;
+    grid-template-areas: 
+    "1"
+    "2"
+    "3"
+    "4";
+}
+
+.experience h3 {
+    grid-area: 1;
+}
+
+.experience h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color)
+}
+
+.experience h5 {
+    color: var(--third-color);
+    padding: 0.5 rem 0 0.5rem 1rem;
+}
+
+.experience p {
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+.experience .exp-1 {
+    grid-area: 2;
+}
+
+.experience .exp-2 {
+    grid-area: 3;
+}
+
+.experience .exp-3 {
+    grid-area: 4;
+}
+
+.formation {
+    overflow: auto;
+    grid-area: F;
+    margin: 0 0 .5rem .5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 1fr;
+    grid-template-areas: 
+    "1"
+    "2"
+    "3";
+}
+
+.formation h3 {
+    grid-area: 1;
+}
+
+.formation h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color)
+}
+
+.formation h5 {
+    color: var(--third-color);
+    padding: 0.5 rem 0 0.5rem 1rem;
+}
+
+.formation p {
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+.formation .form-1 {
+    grid-area: 2;
+}
+
+.formation .form-2 {
+    grid-area: 3;
+}
+
+.otherSkills {
+    grid-area: O;
+    margin-right: 0.5rem;
+}
+
+.otherSkills .list {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.otherSkills .list ul {
+    height: 80%;
+    display: grid;
+}
+
+.otherSkills .list ul i {
+    color: var(--primary-color);
+}
+
+.otherSkills .list ul li {
+    color: var(--fourth-color);
+}
+
+.hobbies {
+    grid-area: H;
+    padding-left: 1.5rem;
+}
+
+.hobbies ul {
+    height: 80%;
+    display: grid;
+}
+
+.hobbies li i {
+    position: absolute;
+    color: var(--primary-color);
+}
+
+.hobbies li span {
+    position: absolute;
+    transform: translateX(2.2rem);
+    color: var(--fourth-color);
+}
+
+@media screen and (max-width: 950px) {
+    .knowledgesContent h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .languagesList {
+        padding-top: .2rem;
+    }
+
+    .knowledgesContent p {
+        font-size: .8rem;
+    }
+
+    .otherSkills, .hobbies {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .knowledgesContent h3 {
+        font-size: 1rem !important;
+    }
+
+    .knowledgesContent h4 {
+        font-size: .9rem !important;
+      }
+
+    .knowledgesContent h5 {
+        font-size: .6rem !important;
+        padding: .2rem 1rem !important;
+      }
+}
+
+@media screen and (max-width: 500px){
+
+    .knowledgesContent {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      grid-template-rows: 1fr 1fr 180px 180px !important;
+    }
+
+    .knowledgesContent h3 {
+        font-size: 0.9rem !important;
+    }
+      
+    .languages {
+        grid-area: 1 !important;
+      }
+    .experience {
+        grid-area: 2 !important;
+        margin-left: 0 !important;
+      }
+    .otherSkills {
+        grid-area: 3 !important;
+        margin-right: 0 !important;
+      }
+    .hobbies {
+        grid-area: 4 !important;
+        margin-top: .5rem !important;
+      }
+
+    
+}

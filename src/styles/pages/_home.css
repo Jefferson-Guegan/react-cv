@@ -1,0 +1,88 @@
+.homeContent {
+    background: linear-gradient(115deg, 
+    var(--secondary-color) 50%, 
+    transparent 100%);
+    min-height: var(--minHeight);
+    width: 100%;
+    min-height: 500px;
+    border-radius: var(--borderRadius);
+    position: relative;
+    overflow: hidden;
+}
+
+.homeContent::after {
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: inherit;
+    background: url('../../media/background.jpg') no-repeat
+    center/cover;
+    z-index: -1;
+    filter: brightness(30%);
+    transform: translateX(30%);
+}
+
+.content {
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    font-family: var(--primary-font);
+}
+
+.homeContent .content h1 {
+    font-size: 5rem;
+    font-family: var(--secondary-font);
+    color: var(--third-color);
+    text-transform: uppercase;
+    text-shadow: 3px 6px 2px var(--black);
+}
+
+.homeContent .content h1:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+
+.homeContent .content h2 {
+
+font-size: 2.5rem;
+padding: 1.5rem 0 7rem;
+text-shadow: 1px 4px 1px var(--black);
+
+} 
+
+.homeContent .content .pdf a {
+    padding: 1px 5px 1px 5px;
+    font-size: 1.5rem;
+    background: var(--third-color);
+    color: var(--fourth-color);
+    border-radius: var(--borderRadius);
+    box-shadow: 0 5px 1px rgb(15,15,15);
+    transition: 0.2s ease;
+}
+
+.homeContent .content .pdf a:hover {
+    background: var(--primary-color);
+}
+
+@media  screen and (max-width: 850px) {
+    .homeContent {
+        margin: 0 !important;
+    }
+    
+}
+
+@media screen and (max-width:580px) {
+    .homeContent::after {
+        background: url('../../media/JGuegan.jpg') no-repeat 60%
+        50% center/cover !important;
+    }
+
+    .homeContent h1 {
+        font-size: 3rem !important;
+    }
+
+    .homeContent h2 {
+        font-size: 1.8rem !important;
+    }
+}

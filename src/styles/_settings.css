@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "font-1";
+    src: url(../assets/fonts/CormorantGaramond-MediumItalic.ttf);
+  }
+  @font-face {
+    font-family: "font-2";
+    src: url(../assets/fonts/FiraSans-ThinItalic.ttf);
+  }
+  
+  :root {
+  --primary-font: "font-1", serif;
+  --secondary-font: "font-2", sans-serif;
+  
+  --primary-color: #b65079;
+  --secondary-color: #35488d;
+  --third-color: #6388a0;
+  --fourth-color: #d99fbc;
+  
+  --black: #3c3947;
+  --white: #c2bdbc;
+
+  --borderRadius: 25px;
+
+  --shadow: 0px 1px 3px #3c3943;
+
+  --minHeight : 95vh;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 1rem auto;
+    max-width: 1500px;
+    font-family: var(--primary-font);
+    color: var (--black); 
+    background: rgba(119,181,254, 0.5);
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+    cursor: pointer;
+}
+
+a:visited {
+    color: var(--black);
+}
+
+.home, 
+.knowledges, 
+.portfolio, 
+.contact {
+    display: flex;
+}
+
+@media screen and (max-width: 850px) {
+    .home, 
+    .knowledges, 
+    .portfolio, 
+    .contact {
+
+        display: block;
+        
+    }
+}
+
+.homeContent, 
+.knowledgesContent, 
+.portfolioContent, 
+.contactContent {
+    margin-left : .4rem;
+}
+
+@media screen and (max-width: 850px) {
+    .homeContent, 
+    .knowledgesContent, 
+    .portfolioContent, 
+    .contactContent {
+
+        margin-left: 0;
+        
+    }
+
+} 
+
+
+  
