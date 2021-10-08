@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Photo from './media/JGuegan.jpg';
+import Photo from '../media/JGuegan.jpg';
 
 const Navigation = () => {
     return (
