@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Photo from './media/JGuegan.jpg';
 
 const Navigation = () => {
     return (
@@ -9,7 +10,7 @@ const Navigation = () => {
 
                 <div className="idContent">
 
-                    <img src="./media/JGuegan.jpg" atl="Jefferson Guegan"/>
+                    <img src={Photo} atl="Jefferson Guegan"/>
                     <h3>Jefferson Guegan</h3>
 
                 </div>
